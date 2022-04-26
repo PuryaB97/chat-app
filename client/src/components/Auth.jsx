@@ -27,6 +27,7 @@ const Auth = () => {
     e.preventDefault();
 
     const { username, password, phoneNumber, avatarURL } = form;
+
     const URL = 'http://localhost:5000/auth';
 
     const {
@@ -62,13 +63,13 @@ const Auth = () => {
       <div className="auth__form-container_fields">
         <div className="auth__form-container_fields-content">
           <p>{isSignup ? 'Sign Up' : 'Sign In'}</p>
-          <form action="" onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
             {isSignup && (
               <div className="auth__form-container_fields-content_input">
                 <label htmlFor="fullName">Full Name</label>
                 <input
-                  type="text"
                   name="fullName"
+                  type="text"
                   placeholder="Full Name"
                   onChange={handleChange}
                   required
@@ -78,8 +79,8 @@ const Auth = () => {
             <div className="auth__form-container_fields-content_input">
               <label htmlFor="username">Username</label>
               <input
-                type="text"
                 name="username"
+                type="text"
                 placeholder="Username"
                 onChange={handleChange}
                 required
@@ -89,8 +90,8 @@ const Auth = () => {
               <div className="auth__form-container_fields-content_input">
                 <label htmlFor="phoneNumber">Phone Number</label>
                 <input
-                  type="text"
                   name="phoneNumber"
+                  type="text"
                   placeholder="Phone Number"
                   onChange={handleChange}
                   required
@@ -101,8 +102,8 @@ const Auth = () => {
               <div className="auth__form-container_fields-content_input">
                 <label htmlFor="avatarURL">Avatar URL</label>
                 <input
-                  type="text"
                   name="avatarURL"
+                  type="text"
                   placeholder="Avatar URL"
                   onChange={handleChange}
                   required
@@ -112,8 +113,8 @@ const Auth = () => {
             <div className="auth__form-container_fields-content_input">
               <label htmlFor="password">Password</label>
               <input
-                type="password"
                 name="password"
+                type="password"
                 placeholder="Password"
                 onChange={handleChange}
                 required
@@ -123,8 +124,8 @@ const Auth = () => {
               <div className="auth__form-container_fields-content_input">
                 <label htmlFor="confirmPassword">Confirm Password</label>
                 <input
-                  type="password"
                   name="confirmPassword"
+                  type="password"
                   placeholder="Confirm Password"
                   onChange={handleChange}
                   required
